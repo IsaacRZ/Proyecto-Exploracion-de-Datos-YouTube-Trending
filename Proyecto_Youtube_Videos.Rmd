@@ -1,0 +1,63 @@
+---
+title: "Analisis de Iris"
+author: "Isaac Rodríguez Zuñiga"
+date: "2026-06-22"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Exploracion de Datos
+### Estudiantes: Isaac Rodriguez Zuñiga
+
+```{r}
+#setwd("~/Big Data/Exploracion_videos_recomend/Proyecto")
+# ==========================================================
+
+# ==================== Librerías ===========================
+library(dplyr)
+library(tidyr)
+# ==========================================================
+
+# Carga Dataset
+videos_recomend <- read.csv("data/raw/yt-recommend.csv")
+analytics <- read.csv("data/raw/yt-analytics.csv")
+
+
+# Mostrar primeras y ultimas líneas
+head(videos_recomend)
+head(analytics)
+#
+tail(videos_recomend)
+tail(analytics)
+
+# Tipos de videos_recomend de cada variable
+str(videos_recomend)
+str(analytics)
+# Resumen estadistico 
+summary(videos_recomend)
+summary(analytics)
+# 
+glimpse(videos_recomend)
+glimpse(analytics)
+
+# Ver NAs y Duplicados
+colSums(is.na(videos_recomend))   
+colSums(is.na(analytics))   
+# 
+anyDuplicated(videos_recomend)
+anyDuplicated(analytics)
+
+# Sapply
+sapply(videos_recomend, class)
+sapply(analytics, class)
+
+# Cleaning
+```
+
+
+

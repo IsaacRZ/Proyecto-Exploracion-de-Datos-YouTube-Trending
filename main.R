@@ -1,7 +1,6 @@
 # =====================  Auxiliar ==========================
 # Limpiar env
 rm(list = ls())
-
 # Set WD (cambiar a ruta adecuada: ´Ctrl + Shift + H´) 
 setwd("~/Big Data/Exploracion_Datos/Proyecto")
 # ==========================================================
@@ -12,7 +11,7 @@ library(tidyr)
 # ==========================================================
 
 # Carga Dataset
-datos <- read.csv("yt-recommend.csv")
+datos <- read.csv("data/raw/yt-recommend.csv")
 
 # Mostrar primeras y ultimas líneas
 head(datos)
@@ -23,6 +22,8 @@ tail(datos)
 str(datos)
 # Resumen estadistico 
 summary(datos)
+# 
+glimpse(datos)
 
 # Ver NAs y Duplicados
 colSums(is.na(datos))   
